@@ -3,12 +3,14 @@ import axios from 'axios';
 
 type Pizza = {
     id: string;
-    title: string;
+    name: string;
     price: number;
-    imageUrl: string;
+    imgUrl: string;
     sizes: number[];
     types: number[];
     rating: number;
+    status: string;
+    count: number;
 };
 type SearchPizzaParams = {
     sort: string;
@@ -32,8 +34,8 @@ const FETCH_PIZZAS_FULFILLED = fetchPizzas.fulfilled.type;
 const FETCH_PIZZAS_REJECTED = fetchPizzas.rejected.type;
 
 const initialState = {
-    items: [],
-    status: 'loading ',
+    items: [] as Pizza[],
+    status: 'loading',
 };
 
 const pizzaSlice = createSlice({

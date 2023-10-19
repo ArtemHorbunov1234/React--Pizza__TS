@@ -5,7 +5,7 @@ type initialStateType = {
     name: string;
     price: number;
     imgUrl: string;
-    type: number;
+    types: number;
     size: number;
     count: number;
 };

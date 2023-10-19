@@ -1,6 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+type Sort = {
+    name: string;
+    sortProperty: 'rating' | 'price' | 'tittle';
+};
+type initialStateType = {
+    categoryId: number;
+    sort: Sort;
+    searchItem: string;
+    currentPage: number;
+};
+
+const initialState: initialStateType = {
     categoryId: 0,
     sort: { name: 'популярности', sortProperty: 'rating' },
     searchItem: '',

@@ -12,21 +12,12 @@ import Pagination from '../component/Pagination/Pagination';
 import { RootState } from '../redux/store';
 import { ChangeEvent } from 'react';
 
-type ItemsHomeType = {
-    name: string;
-    price: number;
-    imgUrl: string;
-    types: number[];
-    id: string;
-    count: number;
-    sizes: number[];
-};
 function Home() {
     const isLoading = useSelector((state: RootState) => state.pizza.status);
     const items = useSelector((state: RootState) => state.pizza.items);
     const [value, setValue] = useState('');
     const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
-    const pizzas = items.map((item: ItemsHomeType) => <Card key={item.id} {...item} />);
+    const pizzas = items.map((item) => <Card key={item.id} {...item} />);
     const dispatch = useDispatch();
     const inputRef = useRef<HTMLInputElement>(null);
     const handleClearSearch = () => {
