@@ -9,8 +9,8 @@ export type ItemsType = {
     name: string;
     price: number;
     imgUrl: string;
-    types: string[];
-    id: number;
+    types: number;
+    id: string;
     count: number;
     size: number;
 };
