@@ -1,0 +1,202 @@
+body {
+    background-color: #ffdf8c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    &::placeholder {
+        text-align: center;
+        font-size: 0.9rem;
+        opacity: 70%;
+        color: gray;
+        font-weight: 200;
+        letter-spacing: 0.6px;
+    }
+}
+
+.content {
+    margin-top: 3rem;
+    margin-inline: auto;
+    max-width: 1350px;
+
+    background-color: white;
+    padding: 47px 51px 0px 51px;
+    border-radius: 10px;
+}
+.content_error {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    > .content_error--header {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+hr {
+    max-width: 1300px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card_pizza {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 41px;
+}
+
+.content_input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    > div {
+        > input {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 16px;
+            padding: 12px 33px 12px 42px;
+            width: 250px;
+        }
+
+        > .content_input--search {
+            width: 30px;
+            position: absolute;
+            transform: translate(10px, 8px);
+        }
+
+        > .content_input--delete {
+            position: absolute;
+            transform: translate(-31px, 10px);
+            cursor: pointer;
+        }
+    }
+}
+
+#active {
+    color: white;
+    background: #282828;
+}
+
+#active_card {
+    background: white;
+}
+
+@media (max-width: 1360px) {
+    .content {
+        max-width: 1200px;
+    }
+    .card_pizza {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
+@media (max-width: 1220px) {
+    .content {
+        max-width: 1080px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .content {
+        max-width: 800px;
+    }
+    .card_pizza {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 860px) {
+    .content {
+        max-width: 630px;
+    }
+    .card_pizza {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 673px) {
+    .content {
+        max-width: 500px;
+    }
+    .card_pizza {
+        grid-template-columns: 1fr;
+    }
+    .content_input {
+        > h1 {
+            font-size: 1.7rem;
+        }
+        > div {
+            > input {
+                font-size: 16px;
+                padding: 8px 10px 10px 42px;
+                width: 170px;
+            }
+            > img {
+                width: 20px;
+                z-index: 0;
+            }
+        }
+    }
+    input {
+        &::placeholder {
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .content {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 441px) {
+    .content {
+        max-width: 300px;
+    }
+    .content_input {
+        align-items: center;
+        gap: 3px;
+        > h1 {
+            font-size: 1.3rem;
+        }
+        > div {
+            > input {
+                font-size: 16px;
+                padding: 8px 10px 10px 32px;
+                width: 120px;
+            }
+            > img {
+                width: 20px;
+                z-index: 0;
+            }
+        }
+    }
+    input {
+        &::placeholder {
+            text-align: center;
+            font-size: 0.5rem;
+        }
+    }
+}

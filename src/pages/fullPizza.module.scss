@@ -1,0 +1,80 @@
+.container {
+    padding-bottom: 2.5rem;
+
+    > .container__pizza {
+        margin-inline: auto;
+        display: flex;
+        gap: 70px;
+        align-items: baseline;
+        justify-content: center;
+
+        > .container--left {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            > a {
+                > .container__btn {
+                    margin-top: 3rem;
+                    cursor: pointer;
+                    padding: 18px;
+                    border-radius: 30px;
+                    background-color: white;
+                    border: 1px solid #d3d3d3;
+                    font-size: 1rem;
+                    color: #8d8d8d;
+
+                    > img {
+                        margin-right: 12px;
+                    }
+                }
+            }
+            > img {
+                width: 260px;
+                margin-inline: auto;
+            }
+
+            > h1 {
+                text-align: center;
+                width: 260px;
+            }
+            > b {
+                font-size: 1.3rem;
+            }
+        }
+        > .container--right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            > .container--right__header {
+                display: flex;
+                gap: 5px;
+
+                align-items: center;
+                > b {
+                    padding: 4px 8px 4px 8px;
+                    background-color: #eb5a1e;
+                    border-radius: 15px;
+                    color: white;
+                }
+            }
+            > .container--right__ingredients {
+                background-color: #f3f3f3;
+                border-radius: 10px;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                > b {
+                    text-align: center;
+                    padding: 6px;
+                    background-color: white;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

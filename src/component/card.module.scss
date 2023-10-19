@@ -1,0 +1,117 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 280px;
+    > a {
+        text-align: center;
+        > h1 {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        > img {
+            width: fit-content;
+            margin-inline: auto;
+        }
+    }
+
+    > div {
+        > .card_top {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+
+            > .card_pizza--dough {
+                display: flex;
+                justify-content: space-around;
+                > li {
+                    cursor: pointer;
+                    padding: 5px 20px 5px 20px;
+                    border-radius: 5px;
+                    font-size: 1.1rem;
+                    letter-spacing: 1.5px;
+                }
+            }
+            > .card_pizza--size {
+                display: flex;
+                justify-content: space-around;
+                padding: 5px;
+                gap: 3px;
+                > b {
+                    cursor: pointer;
+                    padding: 5px 15px 5px 15px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        > .card_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+
+            > b {
+                font-size: 1.2rem;
+            }
+            > button {
+                // &:hover {
+                //     background-color: #eb5a1e;
+                //     color: white;
+                // }
+
+                height: 37px;
+                align-items: center;
+                cursor: pointer;
+                background-color: white;
+                display: flex;
+                gap: 10px;
+                padding: 11px 21px 11px 21px;
+                border: 1px solid #eb5a1e;
+                border-radius: 30px;
+                color: #eb5a1e;
+                > .card_bottom__count {
+                    background-color: #eb5a1e;
+                    padding: 4px 8px 4px 8px;
+                    border-radius: 15px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .card {
+        width: 242px;
+    }
+}
+
+@media (max-width: 673px) {
+    .card {
+        width: 330px;
+    }
+}
+
+@media (max-width: 441px) {
+    .card {
+        width: 205px;
+        > a {
+            > img {
+                width: 160px;
+            }
+        }
+
+        > div {
+            > .card_top {
+                > .card_pizza--dough {
+                    > li {
+                        padding: 5px 10px 5px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > .navigation_left {
+        display: flex;
+        gap: 9px;
+        > li {
+            cursor: pointer;
+            padding: 13px 25px 13px 25px;
+            font-size: 1.15rem;
+            border: none;
+            border-radius: 20px;
+            background-color: #f9f9f9;
+        }
+    }
+    > .navigation_right {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        > .navigation_right--active {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid gray;
+            transform: translate(93px, 98px);
+            height: 153px;
+            justify-content: center;
+            > li {
+                padding: 10px 20px 10px 20px;
+                cursor: pointer;
+            }
+        }
+
+        > li {
+            font-size: 1.15rem;
+            > span {
+                color: #fe5f1e;
+                border-bottom: 1px dashed #fe5f1e;
+                cursor: pointer;
+            }
+        }
+        > img {
+            width: fit-content;
+        }
+    }
+}
+
+#active_selected {
+    background: #fe5f1e0d;
+    color: #fe5f1e;
+}
+
+@media (max-width: 1080px) {
+    .navigation {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 860px) {
+    .navigation {
+        > .navigation_left {
+            > li {
+                padding: 7px 13px 7px 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 673px) {
+    .navigation {
+        > .navigation_left {
+            gap: 1px;
+            > li {
+                padding: 4px 8px 4px 8px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .navigation {
+        > .navigation_left {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            > li {
+                padding: 8px 12px 8px 12px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 441px) {
+    .navigation {
+        > .navigation_right {
+            flex-direction: column;
+        }
+    }
+}

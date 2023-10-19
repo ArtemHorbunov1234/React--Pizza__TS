@@ -1,0 +1,116 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+        > .header_left {
+            display: flex;
+            gap: 17px;
+            width: 314px;
+            height: 42px;
+            > img {
+                width: fit-content;
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                > h1 {
+                    font-size: 1.1rem;
+                }
+                > b {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    > a {
+        > .header_right {
+            align-items: center;
+            display: flex;
+            gap: 9px;
+            padding: 15px 23px 16px 23px;
+            background-color: #fe5f1e;
+            cursor: pointer;
+            width: fit-content;
+            border-radius: 30px;
+            &:hover {
+                background-color: #fe5d1ec4;
+            }
+        }
+    }
+}
+
+@media (max-width: 673px) {
+    .header {
+        > a {
+            > .header_left {
+                gap: 17px;
+                width: fit-content;
+            }
+        }
+
+        > a {
+            > .header_right {
+                gap: 9px;
+                padding: 7px 11px 7px 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .header {
+        flex-direction: column;
+        gap: 30px;
+        > a {
+            > .header_left {
+                gap: 10px;
+                width: fit-content;
+                > div {
+                    > h1 {
+                        font-size: 1rem;
+                    }
+                    > p {
+                        font-size: 0.82rem;
+                    }
+                }
+            }
+        }
+
+        > a {
+            > .header_right {
+                gap: 9px;
+                padding: 7px 11px 7px 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 441px) {
+    .header {
+        > a {
+            > .header_left {
+                gap: 10px;
+                width: fit-content;
+                > div {
+                    > h1 {
+                        font-size: 1rem;
+                    }
+                    > p {
+                        font-size: 0.82rem;
+                    }
+                }
+            }
+        }
+
+        > a {
+            > .header_right {
+                justify-content: center;
+                gap: 9px;
+                padding: 7px 11px 7px 11px;
+                width: 220px;
+            }
+        }
+    }
+}
