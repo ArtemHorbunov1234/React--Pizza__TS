@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -11,7 +12,7 @@ function FullPizza() {
     const navigate = useNavigate();
     const [pizza, setPizza] = useState<{
         name: string;
-        ingredients: Array<null>;
+        ingredients: Array<string>;
         imgUrl: string;
         price: number;
     }>();
@@ -27,7 +28,7 @@ function FullPizza() {
             }
         }
         fetchItems();
-    }, []);
+    }, [id]);
     if (!pizza) {
         return 'Loading....';
     }

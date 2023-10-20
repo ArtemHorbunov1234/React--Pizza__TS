@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 type Pizza = {
@@ -13,22 +13,25 @@ type Pizza = {
     count: number;
 };
 type SearchPizzaParams = {
-    sort: string;
+    sortProperty: string;
     category: string;
     search: string;
     currentPage: number;
 };
 
-export const fetchPizzas = AsyncThunk<Pizza[]>('pizza/fetchPizzasStatus', async (params: SearchPizzaParams) => {
-    if (params) {
-        const { search, category, sort, currentPage } = params;
+export const fetchPizzas = createAsyncThunk<Pizza[], SearchPizzaParams>(
+    'pizza/fetchPizzasStatus',
+    async (params: SearchPizzaParams) => {
+        if (params) {
+            const { search, category, sortProperty, currentPage } = params;
 
-        const { data } = await axios.get(
-            `https://6509be44f6553137159befd1.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sort.sortProperty}&order=desc${search}`
-        );
-        return data;
+            const { data } = await axios.get(
+                `https://6509be44f6553137159befd1.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortProperty}&order=desc${search}`
+            );
+            return data;
+        }
     }
-});
+);
 const FETCH_PIZZAS_PENDING = fetchPizzas.pending.type;
 const FETCH_PIZZAS_FULFILLED = fetchPizzas.fulfilled.type;
 const FETCH_PIZZAS_REJECTED = fetchPizzas.rejected.type;

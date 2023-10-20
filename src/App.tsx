@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Header from './component/Header';
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import qs from 'qs';
 import { useNavigate } from 'react-router-dom';
 import { setFilters } from './redux/slices/filterSlice';
@@ -11,11 +12,11 @@ import { list } from './component/Navigation';
 import { useRef } from 'react';
 import { fetchPizzas } from './redux/slices/pizzasSlice';
 import FullPizza from './pages/FullPizza';
-import { RootState } from './redux/store';
+import { RootState, useAppDispatch } from './redux/store';
 
 function App() {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const { currentPage, categoryId, searchItem, sort } = useSelector((state: RootState) => state.filter);
     const isSearch = useRef(false);
     const isMounted = useRef(false);
@@ -36,6 +37,7 @@ function App() {
             isSearch.current = true;
         }
     }, [dispatch]);
+    const sortProperty = sort.sortProperty;
 
     const getPizzas = () => {
         async function fetchDate() {
@@ -44,7 +46,7 @@ function App() {
                     fetchPizzas({
                         search,
                         category,
-                        sort,
+                        sortProperty,
                         currentPage,
                     })
                 );
