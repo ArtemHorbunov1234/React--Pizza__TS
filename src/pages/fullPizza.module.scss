@@ -78,3 +78,168 @@
         }
     }
 }
+
+@media (max-width: 860px) {
+    .container {
+        > .container__pizza {
+            gap: 20px;
+            > .container--left {
+                width: 240px;
+                align-items: center;
+                > h1 {
+                    font-size: 1.4rem;
+                }
+                > img {
+                    width: 220px;
+                }
+                > b {
+                    font-size: 1rem;
+                }
+                > a {
+                    > .container__btn {
+                        padding: 14px;
+                        font-size: 0.9rem;
+
+                        > img {
+                            width: 6px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+            > .container--right {
+                > div {
+                    > h2 {
+                        font-size: 1.3rem;
+                    }
+                    > b {
+                        font-size: 0.8rem;
+                    }
+                }
+                > .container--right__ingredients {
+                    > b {
+                        padding: 2px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 673px) {
+    .container {
+        > .container__pizza {
+            gap: 0px;
+            > .container--left {
+                width: 220px;
+                > h1 {
+                    font-size: 1.2rem;
+                }
+                > img {
+                    width: 180px;
+                }
+                > b {
+                    font-size: 1rem;
+                }
+                > a {
+                    > .container__btn {
+                        padding: 10px;
+                        font-size: 0.8rem;
+
+                        > img {
+                            width: 5px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+            > .container--right {
+                > div {
+                    > h2 {
+                        font-size: 1.1rem;
+                    }
+                    > b {
+                        font-size: 0.7rem;
+                        padding: 3px 7px 3px 7px;
+                    }
+                }
+                > .container--right__ingredients {
+                    grid-template-columns: 1fr 1fr;
+                    border-radius: 5px;
+                    padding: 7px;
+                    > b {
+                        padding: 1px;
+                        font-size: 0.8rem;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .container {
+        > .container__pizza {
+            > .container--left {
+                width: 188px;
+                gap: 9px;
+                > h1 {
+                    font-size: 1.2rem;
+                }
+                > img {
+                    width: 177px;
+                }
+                > b {
+                    font-size: 0.9rem;
+                }
+                > a {
+                    > .container__btn {
+                        padding: 10px;
+                        font-size: 0.9rem;
+
+                        > img {
+                            width: 5px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+            > .container--right {
+                > div {
+                    > h2 {
+                        font-size: 1.1rem;
+                    }
+                    > b {
+                        font-size: 0.7rem;
+                        padding: 3px 7px 3px 7px;
+                    }
+                }
+                > .container--right__ingredients {
+                    grid-template-columns: 1fr;
+                    > b {
+                        padding: 1px;
+                        font-size: 0.8rem;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 441px) {
+    .container {
+        > .container__pizza {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 20px;
+            > .container--right {
+                > div {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

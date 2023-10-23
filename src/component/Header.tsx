@@ -2,9 +2,20 @@ import styles from './header.module.scss';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+import { useEffect, useRef } from 'react';
 function Header() {
     const { items, totalPrice } = useSelector((state: RootState) => state.cart);
+    const isMounted = useRef(false);
     const totalCounter = items.reduce((sum: number, item) => sum + item.count, 0);
+
+    useEffect(() => {
+        if (isMounted.current) {
+            const json = JSON.stringify(items);
+            localStorage.setItem('cart', json);
+        }
+        isMounted.current = true;
+    }, [items]);
+
     return (
         <div className={styles.header}>
             <Link to=''>
