@@ -13,7 +13,7 @@ if (rootElem) {
     const root = createRoot(rootElem);
     root.render(
         <React.StrictMode>
-            <Router>
+            <Router basename='/React--Pizza__TS/'>
                 <Provider store={store}>
                     <App />
                 </Provider>
