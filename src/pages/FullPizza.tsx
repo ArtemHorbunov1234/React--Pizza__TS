@@ -43,7 +43,7 @@ function FullPizza() {
                     <b>від {pizza.price} грн</b>
                     <Link to='/'>
                         <button className={styles.container__btn}>
-                            <img src='img/cart-exit_button.svg' alt='exit' />
+                            <img src='/React--Pizza__TS/img/cart-exit_button.svg' alt='exit' />
                             Повернутися назад
                         </button>
                     </Link>
