@@ -39,7 +39,7 @@ function FullPizza() {
             <div className={styles.container__pizza}>
                 <div className={styles['container--left']}>
                     <h1>{pizza.name}</h1>
-                    <img src={`/${pizza.imgUrl}`} alt='pizza' />
+                    <img src={`/React--Pizza__TS/${pizza.imgUrl}`} alt='pizza' />
                     <b>від {pizza.price} грн</b>
                     <Link to='/'>
                         <button className={styles.container__btn}>
