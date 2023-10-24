@@ -1,17 +1,22 @@
 {
     "name": "react--pizza-ts",
     "private": true,
+    "homepage": "https://artemhorbunov1234.github.io/react--pizza-ts",
+    "proxy": "https://6509be44f6553137159befd1.mockapi.io",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "deploy": "gh-pages -d dist",
+        "predeploy": "pnpm run build"
     },
     "dependencies": {
         "@reduxjs/toolkit": "^1.9.6",
         "axios": "^1.5.0",
+        "gh-pages": "^6.0.0",
         "lodash.debounce": "^4.0.8",
         "prop-types": "^15.8.1",
         "qs": "^6.11.2",

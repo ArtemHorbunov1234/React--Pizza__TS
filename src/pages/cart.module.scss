@@ -350,6 +350,16 @@
             }
         }
         > .cart--items {
+            > a {
+                > .cart__item {
+                    > div {
+                        > h1 {
+                            font-size: 1.3rem;
+                            width: 103px;
+                        }
+                    }
+                }
+            }
             > .cart__main {
                 gap: 9px;
             }
