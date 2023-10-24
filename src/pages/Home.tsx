@@ -65,7 +65,7 @@ function Home() {
                 <div className='content_error'>
                     <div className='content_error--header'>
                         <h1>Сталася помилка</h1>
-                        <img src='/img/cart-smile.svg' alt='smile' />
+                        <img src='img/cart-smile.svg' alt='smile' />
                     </div>
                     <p>На жаль, не вдалося отримати піци. Спробуйте повторити спробу пізніше.</p>
                 </div>

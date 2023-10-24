@@ -66,13 +66,13 @@ function Cart() {
                 <div className={styles.cart_container}>
                     <div>
                         <h1>Кошик порожній</h1>
-                        <img src='/img/cart-smile.svg' alt='smile' />
+                        <img src='img/cart-smile.svg' alt='smile' />
                     </div>
                     <p>
                         Скоріш за все, ви не замовляли ще піцу. Для того, щоб замовити піцу, перейди на головну
                         сторінку.
                     </p>
-                    <img src='/img/cart-shopping.png' alt='shopping' />
+                    <img src='img/cart-shopping.png' alt='shopping' />
                     <Link to='/'>
                         <button>Повернутися назад</button>
                     </Link>
