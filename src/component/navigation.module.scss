@@ -82,6 +82,11 @@
                 font-size: 1rem;
             }
         }
+        > .navigation_right {
+            > .navigation_right--active {
+                transform: translate(124px, 94px);
+            }
+        }
     }
 }
 
@@ -96,6 +101,11 @@
                 font-size: 1rem;
             }
         }
+        > .navigation_right {
+            > .navigation_right--active {
+                transform: translate(125px, 94px);
+            }
+        }
     }
 }
 
@@ -103,6 +113,10 @@
     .navigation {
         > .navigation_right {
             flex-direction: column;
+            > .navigation_right--active {
+                transform: translate(2px, 64px);
+                transform: translate(125px, 94px);
+            }
         }
         > .navigation_left {
             gap: 8px;
