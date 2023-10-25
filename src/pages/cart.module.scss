@@ -82,7 +82,7 @@
                 > div {
                     > h1 {
                         font-size: 1.3rem;
-                        width: 185px;
+                        width: 145px;
                     }
                     > h2 {
                         font-size: 1.1rem;
@@ -259,9 +259,11 @@
         }
     }
     .cart {
+        margin-top: 70px;
+
         width: 340px;
         > .cart--header {
-            gap: 50px;
+            gap: 183px;
             > div {
                 display: flex;
                 gap: 8px;
@@ -291,7 +293,7 @@
             }
         }
         > .cart--amount {
-            gap: 99px;
+            gap: 248px;
         }
         > .cart--footer {
             gap: 50px;
@@ -334,6 +336,7 @@
     }
     .cart {
         width: 293px;
+        margin-top: 50px;
         > .cart--header {
             gap: 136px;
             > div {
@@ -410,10 +413,15 @@
         }
     }
     .cart {
+        margin-top: 30px;
         width: 200px;
         > .cart--header {
-            gap: 13px;
+            gap: 73px;
             > div {
+                > .cart__shopping {
+                    width: 21px;
+                    height: 21px;
+                }
                 > h1 {
                     font-size: 1.2rem;
                 }
@@ -431,18 +439,31 @@
         }
         > .cart--items {
             flex-direction: column;
+            > a {
+                > .cart__item {
+                    gap: 37px;
+                }
+            }
+            > .cart__main {
+                gap: 35px;
+            }
         }
         > .cart--footer {
-            gap: 7px;
+            gap: 16px;
             > a {
                 > .cart--footer__exit {
-                    width: 100px;
+                    width: 132px;
                     font-size: 0.9rem;
+                    padding: 8px 4px 4px 21px;
+                    > img {
+                        position: absolute;
+                        transform: translate(-20px, 7px);
+                    }
                 }
             }
 
             > .cart--footer__pay {
-                width: 100px;
+                padding: 8px 15px 4px 15px;
                 font-size: 0.9rem;
             }
         }

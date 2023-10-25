@@ -29,11 +29,11 @@ function Cart() {
                 <div className={styles.cart}>
                     <div className={styles['cart--header']}>
                         <div>
-                            <img src='img/cart-icon.svg' alt='cart' />
+                            <img className={styles.cart__shopping} src='img/cart-icon.svg' alt='cart' />
                             <h1>Кошик</h1>
                         </div>
                         <div onClick={onClickClear} className={styles['cart--clear__img']}>
-                            <img src='img/cart-icon_2.svg' alt='cart' />
+                            <img src='img/cart-icon_2.svg' alt='dumpster' />
                             <h2>Очистити кошик</h2>
                         </div>
                     </div>
