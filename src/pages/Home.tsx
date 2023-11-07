@@ -11,6 +11,7 @@ import { useCallback } from 'react';
 import Pagination from '../component/Pagination/Pagination';
 import { RootState } from '../redux/store';
 import { ChangeEvent } from 'react';
+import FooterInfo from '../component/FooterInfo';
 
 function Home() {
     const isLoading = useSelector((state: RootState) => state.pizza.status);
@@ -74,6 +75,7 @@ function Home() {
             )}
 
             <Pagination />
+            <FooterInfo />
         </>
     );
 }

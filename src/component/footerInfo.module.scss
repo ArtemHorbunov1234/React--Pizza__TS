@@ -1,0 +1,209 @@
+footer {
+    background-color: #f0f0f0;
+    padding: 30px 50px 20px 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 2rem;
+}
+.footer_info {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+
+    > img {
+        height: 37px;
+        cursor: pointer;
+    }
+
+    > .footer--left {
+        display: flex;
+        gap: 8rem;
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            > h1 {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+            > p {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    > .footer--right {
+        margin-left: 3rem;
+
+        display: flex;
+        gap: 4rem;
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            > h1 {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+            > p {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            > a {
+                > img {
+                    height: 100px;
+                    width: 187px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        transform-origin: center center;
+                    }
+                }
+            }
+        }
+    }
+    > .footer--left,
+    > .footer--right {
+        flex: 1;
+    }
+}
+
+@media (max-width: 1360px) {
+    .footer_info {
+        gap: 0rem;
+    }
+}
+
+@media (max-width: 1220px) {
+    .footer_info {
+        > .footer--right {
+            > div {
+                > a {
+                    > img {
+                        height: 100px;
+                        width: 187px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .footer_info {
+        > img {
+            display: none;
+        }
+        > .footer--left {
+            gap: 2rem;
+            > div {
+                > h1 {
+                    font-size: 1rem;
+                }
+                > p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        > .footer--right {
+            gap: 2rem;
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                > h1 {
+                    font-size: 1rem;
+                }
+                > p {
+                    font-size: 0.9rem;
+                }
+
+                > a {
+                    > img {
+                        height: 80px;
+                        width: 158px;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+        > .footer--left,
+        > .footer--right {
+            flex: none;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .footer_info {
+        flex-direction: column;
+        gap: 2rem;
+        > .footer--left {
+            justify-content: center;
+            gap: 5rem;
+        }
+    }
+}
+
+@media (max-width: 673px) {
+    .footer_info {
+        flex-direction: column;
+        gap: 2rem;
+        > .footer--right {
+            margin-right: 1rem;
+            justify-content: center;
+            gap: 5rem;
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .footer_info {
+        > .footer--left {
+            justify-content: center;
+            gap: 2.8rem;
+        }
+        > .footer--right {
+            justify-content: center;
+            gap: 3rem;
+            > div {
+                > a {
+                    > img {
+                        height: 64px;
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 441px) {
+    .footer_info {
+        gap: 2rem;
+        > .footer--left {
+            justify-content: center;
+            gap: 2rem;
+        }
+        > .footer--right {
+            margin-right: 1rem;
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+}
