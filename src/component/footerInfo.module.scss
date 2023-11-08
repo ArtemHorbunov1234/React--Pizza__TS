@@ -26,6 +26,7 @@ footer {
                 font-size: 1.1rem;
                 margin-bottom: 0.5rem;
             }
+
             > p {
                 cursor: pointer;
                 &:hover {
@@ -47,6 +48,11 @@ footer {
             > h1 {
                 font-size: 1.1rem;
                 margin-bottom: 0.5rem;
+            }
+            > a {
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             > p {
                 cursor: pointer;

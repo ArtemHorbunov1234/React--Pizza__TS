@@ -29,8 +29,12 @@ function FooterInfo() {
                 <div className={styles['footer--right']}>
                     <div>
                         <h1>Контактна інформація</h1>
-                        <p>+ 38 (063) 344 44 77</p>
-                        <p>react-pizza@ukr.net</p>
+                        <a title='Натисніть, щоб подзвонити нам' href='tel:+380633444477'>
+                            + 38 (063) 344 44 77
+                        </a>
+                        <a title='Натисніть, щоб написати нам емейл' href='mailto:react-pizza@ukr.net'>
+                            react-pizza@ukr.net
+                        </a>
                         <p>Пн-нд з 10:00 по 20:00</p>
                     </div>
                     <div>
